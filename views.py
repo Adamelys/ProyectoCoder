@@ -14,7 +14,7 @@ def cursos(request):
 def crear_curso(request, nombre, camada):
     save_curso = Curso(nombre=nombre,camada=int(camada))
     save_curso.save()
-    context = {p
+    context = {
         "nombre": nombre
     }
     return render(request, "AppCoder/save_curso.html",context)
